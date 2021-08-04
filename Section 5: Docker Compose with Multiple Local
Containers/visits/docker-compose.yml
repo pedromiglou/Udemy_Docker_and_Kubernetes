@@ -1,0 +1,13 @@
+version: '3'
+services:
+    redis-server:
+        # base image
+        image: 'redis'
+        restart: 'unless-stopped'
+    node-app:
+        # find a project in the current folder
+        build: .
+        # map one or more ports
+        ports:
+            - "80:8081"
+        restart: 'unless-stopped'
