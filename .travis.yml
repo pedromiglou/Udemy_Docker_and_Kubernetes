@@ -7,15 +7,3 @@ before_install:
 
 script:
   - docker run -e CI=true miglou/react-app npm run test
-
-
-
-
-
-cript:
-  - docker run USERNAME/docker-react npm run test -- --coverage
- 
-instead should be:
-
-script:
-  - 
