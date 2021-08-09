@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t miglou/react-app -f Section_6/Dockerfile.dev Section_6
+  - docker build -t miglou/react-app -f Section_6/my-react-app/Dockerfile.dev Section_6/my-react-app
 
 script:
   - docker run -e CI=true miglou/react-app npm run test
