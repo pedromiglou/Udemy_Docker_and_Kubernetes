@@ -1,0 +1,21 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t miglou/react-app -f Section_6/Dockerfile.dev Section_6
+
+script:
+  - docker run -e CI=true miglou/react-app npm run test
+
+
+
+
+
+cript:
+  - docker run USERNAME/docker-react npm run test -- --coverage
+ 
+instead should be:
+
+script:
+  - 
