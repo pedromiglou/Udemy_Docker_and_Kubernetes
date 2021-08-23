@@ -15,8 +15,8 @@ after_sucess:
   - docker build -t pedromiglou/section9-worker ./Section_9/worker
 
   # push images to docker hub
-  # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # - docker push pedromiglou/section9-client
-  # - docker push pedromiglou/section9-nginx
-  # - docker push pedromiglou/section9-server
-  # - docker push pedromiglou/section9-worker
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push pedromiglou/section9-client
+  - docker push pedromiglou/section9-nginx
+  - docker push pedromiglou/section9-server
+  - docker push pedromiglou/section9-worker
